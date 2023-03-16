@@ -64,12 +64,18 @@ body {
     width: 60px;
     height: 60px;
     padding: .3125rem;
-    background-color: #dbdbd3;
-    border: .0625rem solid #dbdbd3;
-    border-radius: 1.25rem;
 }
 img{
     width: 80%;
+}
+.line{
+    outline: 1px solid black;
+}
+input{
+    border: none;
+}
+.rad{
+    border-radius:1.25rem ;
 }
 /*
 Scrollbar  
@@ -124,7 +130,7 @@ Col Left
 */
 .header {
     padding: .9375rem;
-    border: 1px solid black;
+    border: 1px solid #eaeaea;
     background-color: #eaeaea;
 }
 .header ul li i {
@@ -136,7 +142,6 @@ Col Left
 */
 .alert {
     background-color: #91dafa;
-    border: .0625rem solid black;
 }
 .alert_icon {
     background-color: #fefefe;
@@ -144,13 +149,13 @@ Col Left
     border-radius: 50%;
     padding: .9375rem;
     color: #91dafa;
+    cursor: pointer;
 }
 /*
 ----Searchbar 
 */
 .search {
     background-color: #eaeaea;
-    padding: .9375rem;
 
 }
 .search i {
@@ -167,6 +172,9 @@ Col Left
     border: 1px solid black;
     overflow-y: scroll;
 }
+.card_list>.card{
+    background-color: white;
+}
 /* 
 Col Right  
 */
@@ -174,15 +182,15 @@ Col Right
     width: 60%;
 }
 #right .header{
-    border: 1px solid black;
+    border: 1px solid #eaeaea;
+    background-color: #eaeaea;
+    border-left: .0625rem solid black;
 }
 .chat-main{
-    border: 1px solid black; 
     background-image:url(../img/mine.jpg);
     overflow-y: scroll;
 }
 .chat-send{
-    border: 1px solid black; 
     background-color: #f3eeea;
 }
 .chat-send>div>i{

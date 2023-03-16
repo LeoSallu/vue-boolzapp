@@ -19,8 +19,9 @@
             <div class="col d-flex column" id="left">
                 <!-- Col head   -->
                 <div class="header d-flex space-bet shrink al-cent">
-                    <div class="img">
-                        <img src="" alt="img">Sofia
+                    <div class="img d-flex al-cent">
+                        <img :src="contacts[0].avatar" alt="img">
+                        <div>{{contacts[0].name}}</div>
                     </div>
                     <div class="font-aw">
                         <ul class="d-flex list-style">
@@ -32,7 +33,7 @@
                 </div>
                 <!--/ Col head   -->
                 <!-- Alert   -->
-                <div class="alert d-flex shrink al-cent">
+                <div class="alert d-flex shrink al-cent line">
                     <div class="alert_icon m-2">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
@@ -43,15 +44,15 @@
                 </div>
                 <!--/ Alert   -->
                 <!-- Search   -->
-                <div class="search d-flex content-center shrink p-2">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="grow" type="text" placeholder="Cerca o inizia una nuova chat">
+                <div class="search d-flex content-center shrink p-5 line">
+                    <i class="fa-solid fa-magnifying-glass line"></i>
+                    <input class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!--/ Search  -->
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-cent">
+                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-cent line">
                             <div class="card d-flex al-cent">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
@@ -74,21 +75,20 @@
             <!-- Col Right  -->
             <div class="col d-flex column space-bet" id="right">
                 <div class="header d-flex space-bet shrink al-cent">
-                    <div class="card d-flex">
+                    <div class="card d-flex al-cent">
                         <div class="img">
-                            <img src="" alt="img">
+                            <img :src="contacts[0].avatar" alt="img">
                         </div>
                         <div class="text">
                             <h6>Michele</h6>
-                            <small>Ultimo messaggio inviato</small>  
-                            <small>12.00</small>       
+                            <small>Ultimo accesso alle 12.00</small>  
                         </div>
                     </div>
                     <div class="font-aw">
                         <ul class="d-flex list-style">
-                            <li class="m-2"><i class="fa-solid fa-magnifying-glass"></i></li>
-                            <li class="m-2"><i class="fa-solid fa-paperclip"></i></li>
-                            <li class="m-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                            <li class="p-5"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li class="p-5"><i class="fa-solid fa-paperclip"></i></li>
+                            <li class="p-5"><i class="fa-solid fa-ellipsis-vertical"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
                 </div>
                 <div class="chat-send d-flex space-bet shrink al-cent">
                     <div class="p-5">
-                        <i class="fa-solid fa-face-smile"></i>
+                        <i class="fa-regular fa-face-smile"></i>
                     </div>
-                    <div class="d-flex grow">
+                    <div class="d-flex grow p-2">
                         <input class="grow p-5" type="text" placeholder="Scrivi un messaggio">
                     </div>
                     <div class="p-2">
