@@ -196,3 +196,16 @@ Col Right
 .chat-send>div>i{
     cursor: pointer;
 }
+/*
+----Chat Main  
+*/
+.sent{
+    padding: 5px 10px;
+    background-color: #d6f8bc;
+    border:1px solid #d6f8bc;
+}
+.received{
+    padding: 5px 10px;
+    background-color: #fefefe;
+    border:1px solid #fefefe;
+}

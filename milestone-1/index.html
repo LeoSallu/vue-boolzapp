@@ -74,6 +74,7 @@
             
             <!-- Col Right  -->
             <div class="col d-flex column space-bet" id="right">
+                <!-- Col Header  -->
                 <div class="header d-flex space-bet shrink al-cent">
                     <div class="card d-flex al-cent">
                         <div class="img">
@@ -92,9 +93,28 @@
                         </ul>
                     </div>
                 </div>
-                <div class="chat-main grow">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi, error aliquam quidem est debitis quisquam? Assumenda harum officia, eius iste provident saepe eaque eligendi nihil odio doloremque alias aspernatur.</p>
+                <!--/ Col Header  -->
+                <!-- Chat Main  -->
+                <div class="chat-main d-flex content-center al-cent grow">
+                    <div class="sms m-2 sent rad">
+                        <div class="sms_content">
+                            {{contacts[0].messages[0].message}} 
+                        </div>
+                        <div class="sms_data">
+                            <small>{{contacts[0].messages[0].date}}</small>
+                        </div>
+                    </div>
+                    <div class="sms m-2 received rad">
+                        <div class="sms_content">
+                            Ok 
+                        </div>
+                        <div class="sms_data">
+                            <small>{{contacts[0].messages[0].date}}</small>
+                        </div>
+                    </div>
                 </div>
+                <!--/ Chat Main  -->
+                <!-- Chat Send  -->
                 <div class="chat-send d-flex space-bet shrink al-cent">
                     <div class="p-5">
                         <i class="fa-regular fa-face-smile"></i>
@@ -107,6 +127,7 @@
                         <i class="fa-solid fa-microphone p-2"></i>
                     </div>
                 </div>
+                <!--/ Chat Send  -->
             </div>
             <!--/ Col Right  --> 
         </div>
