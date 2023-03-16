@@ -9,3 +9,25 @@ RESET
 /*
 Common  
 */
+body{
+    height: 100vh;
+    background: rgb(4,149,136);
+    background: linear-gradient(180deg, rgba(4,149,136,1) 0%, rgba(220,219,209,1) 100%);
+}
+.d-flex{
+    display: flex;
+}
+/*
+Container  
+*/
+.container{
+    max-width: 2220px;
+}
+#left{
+    width: 775px;
+    border: 1px solid black;
+}
+#right{
+    width: 1420px;
+    border: 1px solid black;
+}
