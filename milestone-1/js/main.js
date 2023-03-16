@@ -4,13 +4,13 @@
 const { createApp } = Vue
 
 createApp({
-    // Dati
+// Dati
   data() {
     return {
         
     }
   },
-  // Funzioni
+// Funzioni
   methods:{
     
   }
