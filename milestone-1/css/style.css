@@ -1,7 +1,7 @@
 /*
 RESET 
 */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,33 +9,44 @@ RESET
 /*
 Common  
 */
-body{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background: rgb(4,149,136);
-    background: linear-gradient(180deg, rgba(4,149,136,1) 0%, rgba(220,219,209,1) 100%);
+    background: linear-gradient(#429488 0%,
+            #429488 130px,
+            #dbdbd3 130px,
+            #dbdbd3 100%);
 }
-.d-flex{
+.d-flex {
     display: flex;
 }
-.m-2{
+.m-2 {
     margin: .3125rem;
 }
-.p-2{
+.p-2 {
     padding: .3125rem;
 }
-.space-bet{
+.space-bet {
     justify-content: space-between;
 }
-.content-center{
+.content-center {
     justify-content: center;
 }
-.grow{
+.al-cent{
+    align-items: center;
+}
+.grow {
     flex-grow: 1;
 }
-.list-style{
+.shrink{
+    flex-shrink: 0;
+}
+.list-style {
     list-style: none;
 }
-.link{
+.link {
     color: gray;
     text-decoration: underline;
     cursor: pointer;
@@ -43,43 +54,67 @@ body{
 /*
 Container  
 */
-.container{
-    max-width: 2220px;
+.container {
+    width: 70vw;
+    height: 80vh;
 }
-#left{
+/* 
+Col Left  
+*/
+#left {
     width: 40%;
 }
-.header{
-   align-items: center;
-   padding: .3125rem;
-   border: 1px solid black;
+/*
+----Header  
+*/
+.header {
+    padding: .9375rem;
+    border: 1px solid black;
+    background-color: #eaeaea;
 }
 .header ul li i {
     color: gray;
     cursor: pointer;
 }
-.search{
-    background-color: #fefefe;
-}
-.search i{
-    cursor: pointer;
-}
-.search i, .search input{
-    padding: 5px;
-    background-color: #ffffff;
-}
-.alert{
+/*
+----Alert 
+*/
+.alert {
     background-color: #91dafa;
     border: .0625rem solid black;
 }
-.alert_icon{
+.alert_icon {
     background-color: #fefefe;
     border: .0625rem solid #fefefe;
     border-radius: 50%;
-    padding: .3125rem;
+    padding: .9375rem;
     color: #91dafa;
 }
-#right{
+/*
+----Searchbar 
+*/
+.search {
+    background-color: #eaeaea;
+    padding: .9375rem;
+
+}
+.search i {
+    cursor: pointer;
+}
+.search i,.search input {
+    padding: 5px;
+    background-color: #ffffff;
+}
+/*
+----Chat Body 
+*/
+.chat_body {
+    border: 1px solid black;
+}
+/* 
+Col Right  
+*/
+#right {
     width: 60%;
     border: 1px solid black;
 }
