@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- App  -->
-    <div id="app">
+    <div v-cloak id="app">
         <!-- Container  -->
         <div class="container d-flex">
             <!-- Col Left  -->
@@ -51,13 +51,13 @@
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li class="card d-flex space-bet p-2 al-cent">
-                            <div class="card d-flex">
+                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-cent">
+                            <div class="card d-flex al-cent">
                                 <div class="img">
-                                    <img src="" alt="img">
+                                    <img :src="contacts[index].avatar" alt="img">
                                 </div>
                                 <div class="text">
-                                    <h6>Michele</h6>
+                                    <h6>{{contacts[index].name}}</h6>
                                     <small>Ultimo messaggio inviato</small>         
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nisi, error aliquam quidem est debitis quisquam? Assumenda harum officia, eius iste provident saepe eaque eligendi nihil odio doloremque alias aspernatur.</p>
                 </div>
                 <div class="chat-send d-flex space-bet shrink al-cent">
-                    <div class="p-2">
+                    <div class="p-5">
                         <i class="fa-solid fa-face-smile"></i>
                     </div>
                     <div class="d-flex grow">

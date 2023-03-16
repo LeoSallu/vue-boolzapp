@@ -9,6 +9,9 @@ RESET
 /*
 Common  
 */
+[v-cloak] {
+    display: none;
+  }  
 body {
     display: flex;
     justify-content: center;
@@ -56,6 +59,17 @@ body {
     color: gray;
     text-decoration: underline;
     cursor: pointer;
+}
+.img{
+    width: 60px;
+    height: 60px;
+    padding: .3125rem;
+    background-color: #dbdbd3;
+    border: .0625rem solid #dbdbd3;
+    border-radius: 1.25rem;
+}
+img{
+    width: 80%;
 }
 /*
 Scrollbar  
@@ -151,6 +165,7 @@ Col Left
 */
 .chat_body {
     border: 1px solid black;
+    overflow-y: scroll;
 }
 /* 
 Col Right  

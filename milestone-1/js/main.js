@@ -10,7 +10,7 @@ createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.png',
+                    avatar: './img/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -32,7 +32,7 @@ createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: './img/avatar_2.png',
+                    avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -54,7 +54,95 @@ createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: './img/avatar_3.png',
+                    avatar: './img/avatar_3.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'La Marianna va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'Sicuro di non aver sbagliato chat?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Ah scusa!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Franco',
+                    avatar: './img/avatar_2.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'La Marianna va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'Sicuro di non aver sbagliato chat?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Ah scusa!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Sofia',
+                    avatar: './img/avatar_6.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'La Marianna va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'Sicuro di non aver sbagliato chat?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Ah scusa!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Paola',
+                    avatar: './img/avatar_6.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '28/03/2020 10:10:40',
+                            message: 'La Marianna va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            message: 'Sicuro di non aver sbagliato chat?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 16:15:22',
+                            message: 'Ah scusa!',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Pino',
+                    avatar: './img/avatar_5.jpg',
                     visible: true,
                     messages: [
                         {
