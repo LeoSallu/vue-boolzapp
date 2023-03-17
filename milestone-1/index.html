@@ -23,8 +23,10 @@
             <div class="col d-flex column" id="left">
                 <!-- Col head   -->
                 <div class="header d-flex space-bet shrink al-cent">
-                    <div class="img d-flex al-cent">
-                        <img :src="contacts[0].avatar" alt="img">
+                    <div class="card d-flex al-cent">
+                        <div class="img">
+                            <img :src="contacts[0].avatar" alt="img">
+                        </div>
                         <div>{{contacts[0].name}}</div>
                     </div>
                     <div class="font-aw">
@@ -37,11 +39,11 @@
                 </div>
                 <!--/ Col head   -->
                 <!-- Alert   -->
-                <div class="alert d-flex shrink al-cent">
+                <div class="alert d-flex shrink content-center al-cent">
                     <div class="alert_icon m-2">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
-                    <div class="alert_text">
+                    <div class="alert_text p-5">
                         <h5>Ricevi notifiche di nuovi messaggi</h5>
                         <p class="link">Attiva notifiche desktop</p>
                     </div>
@@ -56,17 +58,17 @@
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-start">
+                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-5  al-start">
                             <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
                                 </div>
-                                <div class="text">
+                                <div class="text p-l-2">
                                     <h6>{{contacts[index].name}}</h6>
                                     <small>Ultimo messaggio inviato</small>         
                                 </div>
                             </div>
-                            <div class="hour">
+                            <div class="hour p-r-2">
                                 <small>12.00</small>
                             </div>
                         </li>
@@ -84,7 +86,7 @@
                         <div class="img">
                             <img :src="contacts[0].avatar" alt="img">
                         </div>
-                        <div class="text">
+                        <div class="text p-l-2">
                             <h6>Michele</h6>
                             <small>Ultimo accesso alle 12.00</small>  
                         </div>

@@ -38,6 +38,12 @@ body {
 .p-5 {
     padding: .9375rem;
 }
+.p-l-2{
+    padding-left: .625rem;
+}
+.p-r-2{
+    padding-right: .625rem;
+}
 .space-bet {
     justify-content: space-between;
 }
@@ -135,7 +141,7 @@ Col Left
 ----Header  
 */
 .header {
-    padding: .9375rem;
+    padding: .3125rem;
     border: 1px solid #eaeaea;
     background-color: #eaeaea;
 }
