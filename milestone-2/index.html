@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Css  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- App  -->
+    <div v-cloak id="app">
+        <!-- Container  -->
+        <div class="container d-flex">
+            <!-- Col Left  -->
+            <div class="col d-flex column" id="left">
+                <!-- Col head   -->
+                <div class="header d-flex space-bet shrink al-cent">
+                    <div class="card d-flex al-cent">
+                        <div class="img">
+                            <img :src="contacts[0].avatar" alt="img">
+                        </div>
+                        <div>{{contacts[0].name}}</div>
+                    </div>
+                    <div class="font-aw">
+                        <ul class="d-flex list-style">
+                            <li class="m-2"><i class="fa-regular fa-circle"></i></li>
+                            <li class="m-2"><i class="fa-regular fa-message"></i></li>
+                            <li class="m-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ Col head   -->
+                <!-- Alert   -->
+                <div class="alert d-flex shrink content-center al-cent">
+                    <div class="alert_icon m-2">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="alert_text p-5">
+                        <h5>Ricevi notifiche di nuovi messaggi</h5>
+                        <p class="link">Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <!--/ Alert   -->
+                <!-- Search   -->
+                <div class="search d-flex content-center shrink p-5">
+                    <i class="fa-solid fa-magnifying-glass line"></i>
+                    <input class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                <!--/ Search  -->
+                <!-- Chat Body  -->
+                <div class="chat_body grow">
+                    <ul class="card_list list-style">
+                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-5  al-start">
+                            <div class="card d-flex">
+                                <div class="img">
+                                    <img :src="contacts[index].avatar" alt="img">
+                                </div>
+                                <div class="text p-l-2">
+                                    <h6>{{contacts[index].name}}</h6>
+                                    <small>Ultimo messaggio inviato</small>         
+                                </div>
+                            </div>
+                            <div class="hour p-r-2">
+                                <small>12.00</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ Chat Body   -->
+            </div>
+            <!--/ Col Left  -->
+            
+            <!-- Col Right  -->
+            <div class="col d-flex column space-bet" id="right">
+                <!-- Col Header  -->
+                <div class="header d-flex space-bet shrink al-cent">
+                    <div class="card d-flex al-cent">
+                        <div class="img">
+                            <img :src="contacts[0].avatar" alt="img">
+                        </div>
+                        <div class="text p-l-2">
+                            <h6>Michele</h6>
+                            <small>Ultimo accesso alle 12.00</small>  
+                        </div>
+                    </div>
+                    <div class="font-aw">
+                        <ul class="d-flex list-style">
+                            <li class="p-5"><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li class="p-5"><i class="fa-solid fa-paperclip"></i></li>
+                            <li class="p-5"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ Col Header  -->
+                <!-- Chat Main  -->
+                <div class="chat-main d-flex content-center al-cent grow">
+                    <div class="sms m-2 sent rad">
+                        <div class="sms_content">
+                            {{contacts[0].messages[0].message}} 
+                        </div>
+                        <div class="sms_data">
+                            <small>{{contacts[0].messages[0].date}}</small>
+                        </div>
+                    </div>
+                    <div class="sms m-2 received rad">
+                        <div class="sms_content">
+                            Ok 
+                        </div>
+                        <div class="sms_data">
+                            <small>{{contacts[0].messages[0].date}}</small>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Chat Main  -->
+                <!-- Chat Send  -->
+                <div class="chat-send d-flex space-bet shrink al-cent">
+                    <div class="p-5">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="d-flex grow p-2">
+                        <input class="grow p-5" type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="p-2">
+                        <i class="fa-solid fa-location-arrow p-2"></i>
+                        <i class="fa-solid fa-microphone p-2"></i>
+                    </div>
+                </div>
+                <!--/ Chat Send  -->
+            </div>
+            <!--/ Col Right  --> 
+        </div>
+        <!--/ Container  -->
+    </div>
+    <!--/ App  -->
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- My JS  -->
+    <script src="js/main.js"></script>
+</body>
+</html>
