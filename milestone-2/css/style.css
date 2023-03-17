@@ -54,9 +54,9 @@ body {
     align-items: center;
 }
 .al-start{
-    align-items: flex-start;  
+    align-self:flex-start;  
 }
-.flex-end{
+.al-end{
     align-self:flex-end;
 }
 .grow {
@@ -218,13 +218,13 @@ Col Right
     margin: 5px;
 }
 .sent{
-    justify-content: flex-end;
     margin: 10px;
+    align-items: flex-end;
     background-color: #d6f8bc;
     border:1px solid #d6f8bc;
 }
 .received{
-    align-content: flex-start;
     background-color: #fefefe;
+    align-items: flex-start;
     border:1px solid #fefefe;
 }
