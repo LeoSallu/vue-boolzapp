@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Lato', sans-serif;
     background: linear-gradient(#429488 0%,
             #429488 130px,
             #dbdbd3 130px,
@@ -46,6 +47,9 @@ body {
 .al-cent{
     align-items: center;
 }
+.al-start{
+    align-items: flex-start;  
+}
 .grow {
     flex-grow: 1;
 }
@@ -63,13 +67,15 @@ body {
 .img{
     width: 60px;
     height: 60px;
-    padding: .3125rem;
+    border:1px solid white ;
+    border-radius: 50%;
+    overflow: hidden;
 }
 img{
-    width: 80%;
+    width: 100%;
 }
 .line{
-    outline: 1px solid black;
+    outline: 1px solid #fbfcfc;
 }
 input{
     border: none;
@@ -170,7 +176,7 @@ Col Left
 */
 .chat_body {
     border: 1px solid black;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .card_list>.card{
     background-color: white;

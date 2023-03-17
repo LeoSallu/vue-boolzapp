@@ -141,8 +141,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Pino',
-                    avatar: './img/avatar_5.jpg',
+                    name: 'Anna',
+                    avatar: './img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -162,6 +162,7 @@ createApp({
                         }
                     ],
                 }
+
             ]
         }
     },

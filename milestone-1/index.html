@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- Css  -->
@@ -33,7 +37,7 @@
                 </div>
                 <!--/ Col head   -->
                 <!-- Alert   -->
-                <div class="alert d-flex shrink al-cent line">
+                <div class="alert d-flex shrink al-cent">
                     <div class="alert_icon m-2">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
@@ -44,7 +48,7 @@
                 </div>
                 <!--/ Alert   -->
                 <!-- Search   -->
-                <div class="search d-flex content-center shrink p-5 line">
+                <div class="search d-flex content-center shrink p-5">
                     <i class="fa-solid fa-magnifying-glass line"></i>
                     <input class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
@@ -52,8 +56,8 @@
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-cent line">
-                            <div class="card d-flex al-cent">
+                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-2 al-start">
+                            <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
                                 </div>
