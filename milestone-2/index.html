@@ -40,7 +40,7 @@
                 <!--/ Col head   -->
                 <!-- Alert   -->
                 <div class="alert d-flex shrink content-center al-cent">
-                    <div class="alert_icon m-2">
+                    <div class="alert_icon m-2 pointer">
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
                     <div class="alert_text p-5">
@@ -51,14 +51,14 @@
                 <!--/ Alert   -->
                 <!-- Search   -->
                 <div class="search d-flex content-center shrink p-5">
-                    <i class="fa-solid fa-magnifying-glass line"></i>
+                    <i class="fa-solid fa-magnifying-glass line pointer"></i>
                     <input class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!--/ Search  -->
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-5  al-start">
+                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-5  al-start pointer">
                             <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
@@ -101,44 +101,16 @@
                 </div>
                 <!--/ Col Header  -->
                 <!-- Chat Main  -->
-                <div class="chat-main d-flex space-bet grow">
-                    <div class="flex-end" id="received">
-                        <div class="sms m-2 d-flex column">
-                            <div class="sms received rad d-flex column">
-                               <div class="text">
-                                Sono un messaggio 
-                               </div> 
-                               <div class="data">
-                                Ore 12
-                               </div>
-                            </div>
-                            <div class="sms received rad d-flex column">
-                                <div class="text">
-                                 Sono un messaggio più lungo
-                                </div> 
-                                <div class="data">
-                                 Ore 12
-                                </div>
-                             </div>
-                             <div class="sms received rad d-flex column">
-                                <div class="text">
-                                 Sono un messaggio 
-                                </div> 
-                                <div class="data">
-                                 Ore 12
-                                </div>
-                             </div>  
-                         </div>    
-                    </div>
-                    <div id="sent">
-                        <div v-for="(chat,index) in contacts[userChat].messages" class="sms m-2 sent rad d-flex column">
-                            <div class="sms_content">
+                <div class="chat-main d-flex column grow">
+                    <div v-for="(chat,index) in contacts[userChat].messages" class="d-flex">
+                        <div :class="msgType(userChat)" class="sms rad d-flex column">
+                            <div class="text">
                                 {{chat.message}} 
                             </div>
-                            <div class="sms_data">
+                            <div class="data">
                                 {{chat.date}}
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
                 <!--/ Chat Main  -->

@@ -92,6 +92,9 @@ input{
 .rad{
     border-radius:1.25rem ;
 }
+.pointer{
+    cursor: pointer;
+}
 /*
 Scrollbar  
 */
@@ -164,7 +167,6 @@ Col Left
     border-radius: 50%;
     padding: .9375rem;
     color: #91dafa;
-    cursor: pointer;
 }
 /*
 ----Searchbar 
@@ -172,9 +174,6 @@ Col Left
 .search {
     background-color: #eaeaea;
 
-}
-.search i {
-    cursor: pointer;
 }
 .search i,.search input {
     padding: 5px;
@@ -219,11 +218,13 @@ Col Right
     margin: 5px;
 }
 .sent{
+    justify-content: flex-end;
     margin: 10px;
     background-color: #d6f8bc;
     border:1px solid #d6f8bc;
 }
 .received{
+    align-content: flex-start;
     background-color: #fefefe;
     border:1px solid #fefefe;
 }

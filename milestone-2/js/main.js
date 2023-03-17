@@ -169,9 +169,19 @@ createApp({
     },
     // Funzioni
     methods: {
+        // Funzione per chat dinamica 
         clickUserChat(index) {
             this.userChat = index;
             console.log(index);
-        }
-    }
+        },
+        //Funzione per smistare i messaggi
+         msgType(index) {
+            if (this.contacts[index].messages[index].status === 'sent') {
+                console.log('Messaggio Inviato')
+                return 'sent';
+            } else {
+                console.log('Messaggio ricevuto')
+                return 'received';
+        }        
+}}
 }).mount('#app');
