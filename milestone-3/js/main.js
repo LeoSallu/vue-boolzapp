@@ -190,7 +190,12 @@ createApp({
             if (this.newMsg.trim() !== '') {
                 this.contacts[this.userChat].messages.push({ message:this.newMsg, status: 'sent' });
                 this.newMsg = '';
+                setTimeout(this.msgAnswer,3000);
             }
+        },
+        msgAnswer(){
+            this.contacts[this.userChat].messages.push({ message:'Ok se lo dici tu', status: 'received' });
+            this.newMsg = '';
         }
 }
 }).mount('#app');
