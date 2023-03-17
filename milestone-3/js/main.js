@@ -158,13 +158,14 @@ createApp({
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah giusto che stupido',
+                            message: 'Ah giusto che stupida',
                             status: 'received'
                         }
                     ],
                 }
 
-            ]
+            ],
+            newMsg:''
         }
     },
     // Funzioni
@@ -183,5 +184,13 @@ createApp({
                 console.log('Messaggio ricevuto')
                 return 'received';
         }        
-}}
+        },
+        //Nuovo Messaggio
+        addMsg() {
+            if (this.newMsg.trim() !== '') {
+                this.contacts[this.userChat].messages.push({ message:this.newMsg, status: 'sent' });
+                this.newMsg = '';
+            }
+        }
+}
 }).mount('#app');
