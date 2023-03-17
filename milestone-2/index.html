@@ -103,7 +103,7 @@
                 <!-- Chat Main  -->
                 <div class="chat-main d-flex column grow">
                     <div v-for="(chat,index) in contacts[userChat].messages" class="d-flex">
-                        <div :class="msgType(userChat)" class="sms rad d-flex column">
+                        <div :class="msgType(chat.status)" class="sms rad d-flex column">
                             <div class="text">
                                 {{chat.message}} 
                             </div>

@@ -176,7 +176,7 @@ createApp({
         },
         //Funzione per smistare i messaggi
          msgType(index) {
-            if (this.contacts[index].messages[index].status === 'sent') {
+            if (index=== 'sent') {
                 console.log('Messaggio Inviato')
                 return 'sent';
             } else {
