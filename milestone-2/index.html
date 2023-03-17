@@ -25,15 +25,15 @@
                 <div class="header d-flex space-bet shrink al-cent">
                     <div class="card d-flex al-cent">
                         <div class="img">
-                            <img :src="contacts[0].avatar" alt="img">
+                            <img :src="contacts[1].avatar" alt="img">
                         </div>
-                        <div class="p-l-2">{{contacts[0].name}}</div>
+                        <div class="p-l-2">Leonardo</div>
                     </div>
                     <div class="font-aw">
-                        <ul class="d-flex list-style">
-                            <li class="m-2"><i class="fa-regular fa-circle"></i></li>
-                            <li class="m-2"><i class="fa-regular fa-message"></i></li>
-                            <li class="m-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        <ul class="d-flex list-style al-cent">
+                            <li class="p-2"><i class="fa-regular fa-circle"></i></li>
+                            <li class="p-2"><i class="fa-regular fa-message"></i></li>
+                            <li class="p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-5  al-start pointer">
+                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-l-5  al-start pointer">
                             <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
@@ -84,10 +84,10 @@
                 <div class="header d-flex space-bet shrink al-cent">
                     <div class="card d-flex al-cent">
                         <div class="img">
-                            <img :src="contacts[0].avatar" alt="img">
+                            <img :src="contacts[userChat].avatar" alt="img">
                         </div>
                         <div class="text p-l-2">
-                            <h6>Michele</h6>
+                            <h6>{{contacts[userChat].name}}</h6>
                             <small>Ultimo accesso alle 12.00</small>  
                         </div>
                     </div>

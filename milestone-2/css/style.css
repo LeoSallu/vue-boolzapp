@@ -186,11 +186,13 @@ Col Left
 ----Chat Body 
 */
 .chat_body {
-    border: 1px solid black;
-    overflow-y: auto;
+    overflow-y: scroll;
+    background-color: white;
+    padding: .625rem;
 }
 .card_list>.card{
     background-color: white;
+    margin: 5px;
 }
 /* 
 Col Right  
@@ -222,15 +224,16 @@ Col Right
 .sms{
     width: 40%;
     padding: 10px 20px;
-    margin: 5px;
 }
 .sent{
     align-self: flex-end;
+    margin: 1.25rem;
     background-color: #d6f8bc;
     border:1px solid #d6f8bc;
 }
 .received{
     align-self: flex-start;
+    margin:1.25rem;
     background-color: #fefefe;
     border:1px solid #fefefe;
 }
