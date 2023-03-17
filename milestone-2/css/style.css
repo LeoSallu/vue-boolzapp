@@ -95,6 +95,9 @@ input{
 .pointer{
     cursor: pointer;
 }
+.test{
+    width: 40px;
+}
 /*
 Scrollbar  
 */
@@ -213,18 +216,21 @@ Col Right
 /*
 ----Chat Main  
 */
+.chat-main{
+    width: 100%;
+}
 .sms{
+    width: 40%;
     padding: 10px 20px;
     margin: 5px;
 }
 .sent{
-    margin: 10px;
-    align-items: flex-end;
+    align-self: flex-end;
     background-color: #d6f8bc;
     border:1px solid #d6f8bc;
 }
 .received{
+    align-self: flex-start;
     background-color: #fefefe;
-    align-items: flex-start;
     border:1px solid #fefefe;
 }

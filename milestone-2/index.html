@@ -102,15 +102,15 @@
                 <!--/ Col Header  -->
                 <!-- Chat Main  -->
                 <div class="chat-main d-flex column grow">
-                    <div v-for="(chat,index) in contacts[userChat].messages" >
-                        <div :class="msgType(chat.status)" class="sms rad d-flex column">
-                            <div class="text">
-                                {{chat.message}} 
-                            </div>
-                            <div class="data">
-                                {{chat.date}}
-                            </div>
-                        </div>                    
+                    <div v-for="(chat,index) in contacts[userChat].messages" class="d-flex column">
+                        <div class="sms rad" :class="msgType(chat.status)">
+                           <div class="text">
+                            {{chat.message}}
+                           </div>
+                           <div class="data">
+                            <small>{{chat.date}}</small>
+                           </div>
+                        </div>
                     </div>
                 </div>
                 <!--/ Chat Main  -->
