@@ -58,7 +58,7 @@
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" class="card d-flex space-bet p-5  al-start">
+                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-5  al-start">
                             <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
@@ -104,23 +104,31 @@
                 <div class="chat-main d-flex space-bet grow">
                     <div class="flex-end" id="received">
                         <div class="sms m-2 d-flex column">
-                            <div class="sms received rad">
-                                Ok
+                            <div class="sms received rad d-flex column">
+                               <div class="text">
+                                Sono un messaggio 
+                               </div> 
+                               <div class="data">
+                                Ore 12
+                               </div>
                             </div>
-                            <div class="sms received rad">
-                                Ok
-                            </div>
-                            <div class="sms received rad">
-                                Ok
-                            </div>
-                            <div class="sms received rad">
-                                Ok
-                            </div>
-                            <div class="sms received rad">
-                                Ok
-                            </div>
-
-                        </div>    
+                            <div class="sms received rad d-flex column">
+                                <div class="text">
+                                 Sono un messaggio più lungo
+                                </div> 
+                                <div class="data">
+                                 Ore 12
+                                </div>
+                             </div>
+                             <div class="sms received rad d-flex column">
+                                <div class="text">
+                                 Sono un messaggio 
+                                </div> 
+                                <div class="data">
+                                 Ore 12
+                                </div>
+                             </div>  
+                         </div>    
                     </div>
                     <div id="sent">
                         <div v-for="(chat,index) in contacts[userChat].messages" class="sms m-2 sent rad d-flex column">

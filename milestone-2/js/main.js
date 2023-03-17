@@ -82,17 +82,17 @@ createApp({
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
+                            message: 'Hai studiato bene Vue?',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
+                            message: 'Si certo',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'Forza Roma allora',
                             status: 'received'
                         }
                     ],
@@ -104,17 +104,17 @@ createApp({
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
+                            message: 'Hai ordinato la pizza ?',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
+                            message: 'E se prendessimo sushi',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'E se prendessimo entrambi ?',
                             status: 'received'
                         }
                     ],
@@ -126,17 +126,17 @@ createApp({
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
+                            message: 'Vado al cinema ma non so a vedere cosa consigli?',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
+                            message: 'Vai sul sicuro con Natale in Perù',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'Ah è uscito allora certo!',
                             status: 'received'
                         }
                     ],
@@ -148,17 +148,17 @@ createApp({
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
+                            message: 'Sto inventando delle chat diverse ma ho finito le idee',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
+                            message: 'Un bel lorem ipsum e passa la paura',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'Ah giusto che stupido',
                             status: 'received'
                         }
                     ],
@@ -169,6 +169,9 @@ createApp({
     },
     // Funzioni
     methods: {
-
+        clickUserChat(index) {
+            this.userChat = index;
+            console.log(index);
+        }
     }
 }).mount('#app');
