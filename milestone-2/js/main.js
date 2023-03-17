@@ -7,6 +7,7 @@ createApp({
     // Dati
     data() {
         return {
+            userChat:0,
             contacts: [
                 {
                     name: 'Michele',

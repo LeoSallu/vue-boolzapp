@@ -27,7 +27,7 @@
                         <div class="img">
                             <img :src="contacts[0].avatar" alt="img">
                         </div>
-                        <div>{{contacts[0].name}}</div>
+                        <div class="p-l-2">{{contacts[0].name}}</div>
                     </div>
                     <div class="font-aw">
                         <ul class="d-flex list-style">
@@ -101,22 +101,36 @@
                 </div>
                 <!--/ Col Header  -->
                 <!-- Chat Main  -->
-                <div class="chat-main d-flex content-center al-cent grow">
-                    <div class="sms m-2 sent rad">
-                        <div class="sms_content">
-                            {{contacts[0].messages[0].message}} 
-                        </div>
-                        <div class="sms_data">
-                            <small>{{contacts[0].messages[0].date}}</small>
-                        </div>
+                <div class="chat-main d-flex space-bet grow">
+                    <div class="flex-end" id="received">
+                        <div class="sms m-2 d-flex column">
+                            <div class="sms received rad">
+                                Ok
+                            </div>
+                            <div class="sms received rad">
+                                Ok
+                            </div>
+                            <div class="sms received rad">
+                                Ok
+                            </div>
+                            <div class="sms received rad">
+                                Ok
+                            </div>
+                            <div class="sms received rad">
+                                Ok
+                            </div>
+
+                        </div>    
                     </div>
-                    <div class="sms m-2 received rad">
-                        <div class="sms_content">
-                            Ok 
-                        </div>
-                        <div class="sms_data">
-                            <small>{{contacts[0].messages[0].date}}</small>
-                        </div>
+                    <div id="sent">
+                        <div v-for="(chat,index) in contacts[userChat].messages" class="sms m-2 sent rad d-flex column">
+                            <div class="sms_content">
+                                {{chat.message}} 
+                            </div>
+                            <div class="sms_data">
+                                {{chat.date}}
+                            </div>
+                        </div>    
                     </div>
                 </div>
                 <!--/ Chat Main  -->

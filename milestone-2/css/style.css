@@ -56,6 +56,9 @@ body {
 .al-start{
     align-items: flex-start;  
 }
+.flex-end{
+    align-self:flex-end;
+}
 .grow {
     flex-grow: 1;
 }
@@ -211,13 +214,16 @@ Col Right
 /*
 ----Chat Main  
 */
+.sms{
+    padding: 10px 20px;
+    margin: 5px;
+}
 .sent{
-    padding: 5px 10px;
+    margin: 10px;
     background-color: #d6f8bc;
     border:1px solid #d6f8bc;
 }
 .received{
-    padding: 5px 10px;
     background-color: #fefefe;
     border:1px solid #fefefe;
 }
