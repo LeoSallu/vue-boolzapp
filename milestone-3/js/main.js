@@ -77,7 +77,7 @@ createApp({
                 },
                 {
                     name: 'Franco',
-                    avatar: './img/avatar_2.jpg',
+                    avatar: './img/avatar_7.jpg',
                     visible: true,
                     messages: [
                         {
@@ -99,7 +99,7 @@ createApp({
                 },
                 {
                     name: 'Sofia',
-                    avatar: './img/avatar_6.jpg',
+                    avatar: './img/avatar_io.jpg',
                     visible: true,
                     messages: [
                         {
@@ -143,7 +143,7 @@ createApp({
                 },
                 {
                     name: 'Anna',
-                    avatar: './img/avatar_6.jpg',
+                    avatar: './img/avatar_io.jpg',
                     visible: true,
                     messages: [
                         {

@@ -193,6 +193,10 @@ Col Left
 .card_list>.card{
     background-color: white;
     margin: 5px;
+    padding: 10px;
+}
+:hover.card{
+    background-color: #eaeaea;
 }
 /* 
 Col Right  
