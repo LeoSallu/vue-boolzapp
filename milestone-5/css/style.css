@@ -77,8 +77,8 @@ body {
     cursor: pointer;
 }
 .img{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border:1px solid white ;
     border-radius: 50%;
     overflow: hidden;
@@ -93,13 +93,10 @@ input{
     border: none;
 }
 .rad{
-    border-radius:1.25rem ;
+    border-radius: .9375rem ;
 }
 .pointer{
     cursor: pointer;
-}
-.test{
-    width: 40px;
 }
 /*
 Scrollbar  
@@ -171,7 +168,8 @@ Col Left
     background-color: #fefefe;
     border: .0625rem solid #fefefe;
     border-radius: 50%;
-    padding: .9375rem;
+    padding: .75rem;
+    font-size: 1.0625rem;
     color: #91dafa;
 }
 /*
@@ -194,11 +192,9 @@ Col Left
 .chat_body {
     overflow-y: scroll;
     background-color: white;
-    padding: .625rem;
 }
 .card_list>.card{
     background-color: white;
-    margin: 5px;
     padding: 10px;
 }
 :hover.card{
@@ -225,6 +221,12 @@ Col Right
 .chat-send>div>i{
     cursor: pointer;
 }
+.text-big {
+    font-size: .9375rem;
+}
+.text-small{
+    color: gray;
+}
 /*
 ----Chat Main  
 */
@@ -233,7 +235,7 @@ Col Right
 }
 .sms{
     width: 40%;
-    padding: 10px 20px;
+    padding: .3125rem .9375rem;
 }
 .sent{
     align-self: flex-end;

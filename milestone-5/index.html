@@ -45,7 +45,7 @@
                     </div>
                     <div class="alert_text p-5">
                         <h5>Ricevi notifiche di nuovi messaggi</h5>
-                        <p class="link">Attiva notifiche desktop</p>
+                        <small class="link text-small">Attiva notifiche desktop</small>
                     </div>
                 </div>
                 <!--/ Alert   -->
@@ -63,9 +63,9 @@
                                 <div class="img">
                                     <img :src="chat.avatar" alt="img">
                                 </div>
-                                <div class="text p-l-2">
+                                <div class="text-big p-l-2">
                                     <h6>{{chat.name}}</h6>
-                                    <small>{{chat.messages[userChat].message}}</small>         
+                                    <small class="text-small">{{chat.messages[userChat].message}}</small>         
                                 </div>
                             </div>
                             <div class="hour p-r-2">
@@ -86,9 +86,9 @@
                         <div class="img">
                             <img :src="contacts[userChat].avatar" alt="img">
                         </div>
-                        <div class="text p-l-2">
-                            <h6>{{contacts[userChat].name}}</h6>
-                            <small>Ultimo accesso alle 12.00</small>  
+                        <div class="p-l-2">
+                            <h6 class="text-big">{{contacts[userChat].name}}</h6>
+                            <small class="text-small">Ultimo accesso alle 12.00</small>  
                         </div>
                     </div>
                     <div class="font-aw">
@@ -108,7 +108,7 @@
                             {{chat.message}}
                            </div>
                            <div class="data al-end">
-                            <small>{{getHour(chat.date)}}</small>
+                              <small>{{getHour(chat.date)}}</small>
                            </div>
                         </div>
                     </div>
