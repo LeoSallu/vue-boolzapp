@@ -165,7 +165,9 @@ createApp({
                 }
 
             ],
-            newMsg:''        }
+            newMsg:'',        
+            searchText:''
+        }
     },
     // Funzioni
     methods: {
@@ -200,6 +202,17 @@ createApp({
             const formatHour = DateTime.fromFormat(date,'dd/mm/yyyy hh:mm:ss')
             const hour = `${formatHour.hour}:${formatHour.minute}`;
             return hour
+        },
+        //Searchbar
+        search(){
+              this.contacts.name = this.contacts.name.filter(element => element.includes(this.searchText));
+        },
+        newChatList() {
+            if (this.searchText !== '') {
+                return this.contacts.name.filter(element => element.toLowerCase().includes(this.searchText.toLowerCase()));
+            } else {
+                return this.contacts.name;
+            }
         }
     }
 }).mount('#app');
