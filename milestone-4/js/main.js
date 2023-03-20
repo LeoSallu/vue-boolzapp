@@ -2,7 +2,9 @@
 
 // Vue 
 const { createApp } = Vue
-
+const DateTime = luxon.DateTime;  
+let now = DateTime.now();
+let formattedDate = now.toFormat('dd/MM/yyyy HH:mm:ss');         
 createApp({
     // Dati
     data() {
@@ -174,7 +176,6 @@ createApp({
         // Funzione per chat dinamica 
         clickUserChat(index) {
             this.userChat = index;
-            console.log(index);
         },
         //Funzione per smistare i messaggi
          msgType(index) {
@@ -187,31 +188,29 @@ createApp({
         //Nuovo Messaggio
         addMsg() {
             if (this.newMsg.trim() !== '') {
-                this.contacts[this.userChat].messages.push({ message:this.newMsg, status: 'sent' });
+                this.contacts[this.userChat].messages.push({ message:this.newMsg, status: 'sent', date: formattedDate});
                 this.newMsg = '';
                 setTimeout(this.msgAnswer,3000);
             }
         },
         msgAnswer(){
-            this.contacts[this.userChat].messages.push({ message:'Ok se lo dici tu', status: 'received' });
+            this.contacts[this.userChat].messages.push({ message:'Ok se lo dici tu', status: 'received', date: formattedDate});
             this.newMsg = '';
         },
         //Funzione per formattare date 
         getHour(date){
-            var DateTime = luxon.DateTime;           
             const formatHour = DateTime.fromFormat(date,'dd/mm/yyyy hh:mm:ss')
             const hour = `${formatHour.hour}:${formatHour.minute}`;
             return hour
         },
         //Searchbar
-        search(){
-              this.contacts.name = this.contacts.name.filter(element => element.includes(this.searchText));
-        },
-        newChatList() {
-            if (this.searchText !== '') {
-                return this.contacts.name.filter(element => element.toLowerCase().includes(this.searchText.toLowerCase()));
+       searchChat() {
+            if (this.searchText.trim() !== '') {
+               return this.contacts.filter(element => 
+                    (element.name).toLowerCase().includes(this.searchText.toLowerCase().trim()));
+                
             } else {
-                return this.contacts.name;
+                return this.contacts;
             }
         }
     }

@@ -52,13 +52,13 @@
                 <!-- Search   -->
                 <div class="search d-flex content-center shrink p-5">
                     <i class="fa-solid fa-magnifying-glass line pointer p-x"></i>
-                    <input class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="searchText" @keyup="searchChat" class="grow line" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!--/ Search  -->
                 <!-- Chat Body  -->
                 <div class="chat_body grow">
                     <ul class="card_list list-style">
-                        <li v-for="(chat,index) in contacts" @click="clickUserChat(index)" class="card d-flex space-bet p-l-5  al-start pointer">
+                        <li v-for="(chat,index) in searchChat()" @click="clickUserChat(index)" class="card d-flex space-bet p-l-5  al-start pointer">
                             <div class="card d-flex">
                                 <div class="img">
                                     <img :src="contacts[index].avatar" alt="img">
