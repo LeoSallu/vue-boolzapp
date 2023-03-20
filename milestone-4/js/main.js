@@ -10,6 +10,7 @@ createApp({
     data() {
         return {
             userChat:0,
+            searchText:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -168,7 +169,6 @@ createApp({
 
             ],
             newMsg:'',        
-            searchText:''
         }
     },
     // Funzioni
@@ -204,11 +204,9 @@ createApp({
             return hour
         },
         //Searchbar
-       searchChat() {
+        searchChat(){
             if (this.searchText.trim() !== '') {
-               return this.contacts.filter(element => 
-                    (element.name).toLowerCase().includes(this.searchText.toLowerCase().trim()));
-                
+                return this.contacts.filter(element =>(element.name).toLowerCase().includes(this.searchText.toLowerCase().trim()));
             } else {
                 return this.contacts;
             }
